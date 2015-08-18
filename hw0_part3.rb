@@ -1,31 +1,31 @@
 =begin
-	Integrantes: 
-	Leonardo Daneu Lopes	8516816
-	Lucas Sung Jun Hong	8124329
+    Integrantes: 
+    Leonardo Daneu Lopes    8516816
+    Lucas Sung Jun Hong 8124329
 =end
 
 class BookInStock < ArgumentError
-	def initialize(isbn, price)
-		@isbn 	= isbn
-		@price 	= price
-		
-		if (@price <= 0 || @isbn.empty? == true)
-			raise ArgumentError
-		end
-	end
+    def initialize(isbn, price)
+        @isbn   = isbn
+        @price  = price
+        
+        if (@price <= 0 || @isbn.empty? == true)
+            raise ArgumentError
+        end
+    end
 
-	attr_accessor :isbn
-	attr_accessor :price
+    attr_accessor :isbn
+    attr_accessor :price
 
-	def price_as_string
-		price_new = price.to_s
-		if ( price.to_s =~ /^\d+\.\d{1}$/ )
-			price_new << "0"
-		elsif ( price.to_s =~ /^\d+$/ )
-			price_new << ".00"
-		end
-		return price_new
-	end
+    def price_as_string
+        price_new = "$" + price.to_s
+        if ( price.to_s =~ /^\d+\.\d{1}$/ )
+            price_new << "0"
+        elsif ( price.to_s =~ /^\d+$/ )
+            price_new << ".00"
+        end
+        return price_new
+    end
 end
 
 =begin
