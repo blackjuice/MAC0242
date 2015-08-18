@@ -68,8 +68,8 @@ def sum_to_n?(a, n)
     if a.length == 0
     	c = false
     end
-    for i in 0..a.repeated_combination(2).to_a.length - 1
-        if sum(a.repeated_combination(2).to_a[i]) == n
+    for i in 0..a.permutation(2).to_a.length - 1
+        if sum(a.permutation(2).to_a[i]) == n
             c = true
             break
         else 
@@ -78,5 +78,4 @@ def sum_to_n?(a, n)
     end
     return c
 end
-
 
