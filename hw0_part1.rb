@@ -51,16 +51,23 @@ def max_2_sum(a)
     b = 0
 
     if a.length > 0
-        b += a.max_by{|x| x}.max
+        b += a.max_by{|x| x}
     end
     
     if a.length > 1
-        b += a.reject{|x| x == b}.max
+    	if a.count(b) > 1
+    	    b += b
+    	else 
+            b += a.reject{|x| x == b}.max 
+    	end
     end
     return b
 end
 
 def sum_to_n(a, n)
+    if a.length == 0
+    	c = false
+    end
     for i in 0..a.repeated_combination(2).to_a.length - 1
         if sum(a.repeated_combination(2).to_a[i]) == n
             c = true
