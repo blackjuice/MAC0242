@@ -35,6 +35,11 @@ end
 
 /********** LEO VERSION ***************/
 
+=begin
+	Integrantes: 
+	Leonardo Daneu Lopes	8516816
+	Lucas Sung Jun Hong	8124329
+=end
 
 def sum(a)
     b = 0
