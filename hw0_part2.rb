@@ -5,7 +5,7 @@
 =end
 
 def hello(name)
-    print "Hello, ", name, "\n"
+    name = "Hello, " + name
 end
 
 def starts_with_consonant?(s)
