@@ -64,7 +64,7 @@ def max_2_sum(a)
     return b
 end
 
-def sum_to_n(a, n)
+def sum_to_n?(a, n)
     if a.length == 0
     	c = false
     end
