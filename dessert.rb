@@ -1,3 +1,9 @@
+=begin
+	Integrantes: 
+	Leonardo Daneu Lopes	8516816
+	Lucas Sung Jun Hong	8124329
+=end
+
 class Dessert
 
     attr_accessor :name, :calories
