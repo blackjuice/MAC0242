@@ -1,3 +1,10 @@
+=begin
+	Integrantes: 
+	Leonardo Daneu Lopes	8516816
+	Lucas Sung Jun Hong	8124329
+=end
+
+
 module FunWithStrings
     def palindrome?
         str = self.downcase.gsub(/[^a-z]/,'')
