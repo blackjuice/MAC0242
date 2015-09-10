@@ -16,15 +16,28 @@ class RockPaperScissors
             when "r" then 
                 if (player2.last.downcase == "s") 
                     return player1 
-                else return player2 end
+                else 
+                    return player2 end
             when "p" then 
                 if (player2.last.downcase == "r") 
                     return player1 
-                else return player2 end
+                else 
+                    return player2 end
             when "s" then 
                 if (player2.last.downcase == "p") 
                     return player1 
                 else return player2 end
         end 
-    end       
+    end      
+
+    def self.tournament_winner (tournament)
+
+        if tournament[0][0].is_a? String
+            return self.winner(tournament[0], tournament[1])
+        end
+
+        return self.winner(self.tournament_winner(tournament[0]), self.tournament_winner(tournament[1]))
+
+    end
+ 
 end
