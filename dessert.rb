@@ -1,9 +1,3 @@
-=begin
-	Integrantes: 
-	Leonardo Daneu Lopes	8516816
-	Lucas Sung Jun Hong	8124329
-=end
-
 class Dessert
 
     attr_accessor :name, :calories
@@ -15,10 +9,11 @@ class Dessert
     def healthy?
         if @calories < 200
             return true
+        end
         return false
     end
     
-    def deicious?
+    def delicious?
         return true
     end
     
@@ -33,8 +28,8 @@ class JellyBean < Dessert
         @flavour = flavour
     end
 
-    def deicious?
-        if @flavour = "licorice"
+    def delicious?
+        if @flavour == "licorice"
             return false
         end  
         return true
