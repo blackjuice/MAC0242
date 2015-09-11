@@ -24,13 +24,3 @@ class Class
         }
   end
 end
-
-=begin
-            def #{attr_name}=(value)
-                if !defined? @#{attr_name}_history
-                    @#{attr_name}_history = [@#{attr_name}]
-                end
-                @#{attr_name} = value
-                @#{attr_name}_history << value
-            end
-=end
